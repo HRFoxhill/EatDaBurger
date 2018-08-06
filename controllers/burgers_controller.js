@@ -18,13 +18,13 @@ router.get("/", function (req, res) {
 
   // call burger model function to get all columns from the burger table
   burgerModel.all(function (data) {
-    var hbsObject = {
+    var burgerObj = {
       burger: data
     };
-    console.log(hbsObject);
+    console.log(burgerObj);
 
     // use array of objects from the database query to load index.handlebars
-    res.render("index", hbsObject);
+    res.render("index", burgerObj);
   });
 });
 

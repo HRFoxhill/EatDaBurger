@@ -6,13 +6,14 @@
 <span class="card">
 	<span> <i>{{burger_name}}</i>  </span> 
 	<br>
-	<button class="change-eaten" data-id="{{id}}" data-eaten="{{devoured}}">
+	<button class="change-eaten" data-id="{{this.id}}" data-eaten="{{devoured}}">
 		{{#if devoured}}Re-Order Burger!{{else}}Eat the Meat!{{/if}}
 	</button> 
 	<br>
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
 </span>
 {{/each}}
+<div> </div>
 <form class="create-form">
   <hr>
   <h2>Add a Burger</h2>
