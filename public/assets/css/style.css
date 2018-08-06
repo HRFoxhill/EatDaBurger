@@ -25,10 +25,10 @@
 }
 
 body{
-  background-image: url("../images/dinerbackground.jpg");
+  background-image: url("../img/burger.png");
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  /* background-repeat: no-repeat; */
+  background-size: 25%;
 }
 
 #mainContent{

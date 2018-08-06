@@ -46,12 +46,12 @@ router.post("/api/burger", function(req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var putBurger = "id = " + req.params.id;
 
-  console.log("condition", condition);
+  console.log("Burger Put:", putBurger);
 
   // use burger model function to update an entry in database with new info in specific columns
-  burgerModel.update({devoured: req.body.devoured}, condition, function(result) {
+  burgerModel.update({devoured: req.body.devoured}, putBurger, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -65,10 +65,10 @@ router.put("/api/burgers/:id", function(req, res) {
 router.delete("/api/burger/:id", function(req, res) {
 
   // get the id of the entry from the request parameters
-  var condition = "id = " + req.params.id;
+  var putBurger = "id = " + req.params.id;
 
 // use burger model function to delete an entry in the database
-  burgerModel.delete(condition, function(result) {
+  burgerModel.delete(putBurger, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();

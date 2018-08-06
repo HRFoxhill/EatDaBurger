@@ -13,8 +13,8 @@ var connection = mysql.createConnection({
   user: "root",
   password: "root",
   database: "burgers_db"
-});
-}
+})
+};
 
 
 // Make connection
