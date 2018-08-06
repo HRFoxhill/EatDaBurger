@@ -2,24 +2,17 @@
 <div id="logo">
   <img src="static/assets/img/burgerLogo.jpg" alt="" class="logo">
 </div>
-
-    <div id="buttons">
-      <button id="devoured-sort">Show Un-eaten</button>
-      <button id="available-sort">Show Eaten</button>
-    </div>
-    <table id="results">
-      <thead>
-        <tr>
-          <th id="Burger-name">Name</th>
-          <th id="Burger-Status">Available?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Results from DB here -->
-      </tbody>
-    </table>
-
-
+{{#each burger}}
+<span class="card">
+	<span> <i>{{burger_name}}</i>  </span> 
+	<br>
+	<button class="change-eaten" data-id="{{id}}" data-eaten="{{devoured}}">
+		{{#if devoured}}Re-Order Burger!{{else}}Eat the Meat!{{/if}}
+	</button> 
+	<br>
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</span>
+{{/each}}
 <form class="create-form">
   <hr>
   <h2>Add a Burger</h2>
