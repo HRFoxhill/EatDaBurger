@@ -17,11 +17,13 @@ $(function() {
     else{
       newState = 1;
     }
+
+    return newState;
   }
     // create an object with the new key-value pair(s)
     var newAttr = {
       devoured: newState
-    }
+    };
 
 
 
