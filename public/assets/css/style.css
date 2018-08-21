@@ -62,3 +62,13 @@ body{
 .form-group {
   margin-bottom: 5px;
 }
+
+h1 {
+  font-size: xx-large;
+  color: maroon;
+}
+
+h2 {
+  font-weight: bolder;
+  color: maroon;
+}
