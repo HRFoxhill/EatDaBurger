@@ -1,10 +1,14 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var favicon = require('express-favicon');
+
 
 // create our port (two definitions depending on site being local or hosted)
 var PORT = process.env.PORT || 8080;
 var app = express();
 
+// Serve Favicon
+app.use(favicon(__dirname + '/public/favicon.ico'));
 // Serve content at routes from '/static'  for the app from the "public" directory in the application directory.
 app.use('/static', express.static('public'));
 
